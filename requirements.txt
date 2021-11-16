@@ -1,0 +1,9 @@
+soundfile
+torch
+torchaudio
+transformers
+pyaudio
+webrtcvad
+rx
+halo
+fastcore
