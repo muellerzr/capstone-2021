@@ -11,7 +11,11 @@ def getHashedPassphrase(passphrase):
     return str(bcrypt.hashpw(encodedPassphrase, salt))
 
 def insertIntoDatabase(username, hashed_passphrase):
-    client = MongoClient('mongodb+srv://Gabe:Pa55w0rd!@cluster0.27gwi.mongodb.net/Cluster0?retryWrites=true&w=majority')
+    username = "Gabe"
+    password = "Pa55w0rd!"
+    url = f'mongodb+srv://{username}:{password}@cluster0.27gwi.mongodb.net/Cluster0?retryWrites=true&w=majority'
+    client = MongoClient(url)
+    
     db = client.credentials
     credential = {
         'username' : username,
