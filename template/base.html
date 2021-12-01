@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+  <head>
+    {% block head %}
+    
+    <html lang="en">
+
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link href="{{ url_for('static', path='styles.css') }}" rel="stylesheet" />
+
+    {% endblock %}
+  </head>
+
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="static\S.E.S.A.M.E..png" id="icon" alt="User Icon" />
+      </div>
+
+      <!-- Login Form -->
+      <form>
+        <input
+          type="text"
+          id="login"
+          class="fadeIn second"
+          name="login"
+          placeholder="login"
+        />
+        <input
+          type="file"
+          accept="audio/*"
+          id="password"
+          class="fadeIn third"
+          name="login"
+          placeholder="passphrase"
+          capture
+        />
+        <input type="submit" class="fadeIn fourth" value="Log In" />
+      </form>
+
+      <!-- Remind Password -->
+      <div id="formFooter">
+        <a class="underlineHover" href="#">Forgot Passphrase?</a>
+      </div>
+    </div>
+  </div>
+</html>
