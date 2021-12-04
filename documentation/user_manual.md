@@ -4,7 +4,13 @@
 
 ## Viewing the Local Interface
 
-**Nick needs to fill out**
+To view the front-end of the web application, run the following to start the local server:
+
+```bash
+uvicorn app.main:app --reload --port 8080
+```
+
+Navigate to http://127.0.0.1:8080/ and the user interface will populate in your web browser.
 
 ## Running the Speech2Text Framework
 
@@ -13,13 +19,14 @@ To start up the server, run the following from the root of the repository:
 ```bash
 python3 deps/audio2text.py
 ```
+
 You should then see a variety of set up messages appear in your terminal, concluded with "Running on local URL: http://XXX.Y.Z.A:BCDE"
 
 Navigate to that webpage and you will be greeted by a Gradio app.
 
 Potentially enable microphone usage in your web browser.
 
-When you are ready to enter a passphrase of your choosing (it can be anything), hit the "Record" button to start, and again to finish. 
+When you are ready to enter a passphrase of your choosing (it can be anything), hit the "Record" button to start, and again to finish.
 
 Afterwards hit the yellow "Submit" button.
 
